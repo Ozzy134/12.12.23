@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vxod</title>
+</head>
+<body>
+    <div class="vxod_form">
+        <h1 class="vxod_text">Вход</h1>
+        <p class="vxod_text_2">Войдите в учётную запись</p>
+        <form action="" method="post" class="form_class">
+            {% csrf_token %}
+            {% for field in form %}
+            <div>
+                <p>{{ field.label_tag }}</p>
+                {{ field }}
+            </div>
+            {% endfor %}
+        <button class="vxod_btn"> Войти </button>
+    </div>
+        <div class="vxod_text_3">
+            <p>Ещё не зарегестрированы?</p>
+        </div>
+        <button class="vxod_btn_2"> Регистрация </button>
+</body>
+</html>

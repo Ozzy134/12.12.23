@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reg</title>
+</head>
+<body>
+     <div class="reg_form">
+        <h1 class="reg_text">Регистрация</h1>
+        <p class="reg_text_2">Зарегестрируйте учётную запись</p>
+        <form action="" method="post" class="reg_class">
+            {% csrf_token %}
+            {% for field in form %}
+            <div>
+                <p>{{ field.label_tag }}</p>
+                {{ field }}
+            </div>
+            {% endfor %}
+        <button class="reg_btn"> Регистрация </button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style></style>
+</head>
+<body>
+    <form action="" method="post" class="form_class">
+        {% csrf_token %}
+        {% for field in form %}
+        <div>
+            <p>{{ field.label_tag }}</p>
+            {{ field }}
+        </div>
+
+        {% endfor %}
+        <button> Send </button>
+    </form>
+</body>
+</html>
